@@ -1,0 +1,14 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/HcySunYang/homepage.git",
+  "author": "HcySunYang <HcySunYang@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "node ./build.js"
+  },
+  "devDependencies": {
+    "html-minifier": "^4.0.0"
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>清清河畔</title>
+    <style>
+      .main {
+        width: 900px;
+        text-align: center;
+        margin: 0 auto;
+      }
+      .btn-box button {
+        font-size: 20px;
+        width: 100px;
+      }
+      .btn-box button:first-of-type {
+        margin-right: 30px;
+      }
+      #ok-box,
+      #no-box {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <h1>清清你好，我可以加你的微信嘛：</h1>
+      <img src="./assets/images.jpeg" />
+      <div class="btn-box">
+        <button>可以</button>
+        <button>不可以</button>
+      </div>
+      <div id="ok-box">
+        <h1>微信号发给我呗</h1>
+        <img src="./assets/2.jpeg" />
+      </div>
+      <div id="no-box">
+        <h1>再考虑考虑吧</h1>
+        <img src="./assets/3.jpeg" />
+      </div>
+    </div>
+    <script>
+      var btns = document.querySelectorAll('button')
+      btns[0].addEventListener('click', () => {
+        document.getElementById('no-box').style.display = 'none'
+        document.getElementById('ok-box').style.display = 'block'
+      })
+      btns[1].addEventListener('click', () => {
+        document.getElementById('no-box').style.display = 'block'
+        document.getElementById('ok-box').style.display = 'none'
+      })
+    </script>
+  </body>
+</html>

@@ -17,4 +17,4 @@ jobs:
       #     who-to-greet: HcySunYang
       # Until the vue3 is released, the real test is taken.
       - run: yarn
-      - run: yarn notify ${{ secrets.TOKEN }}
+      - run: yarn notify $GITHUB_REPOSITORY $GITHUB_EVENT_NAME ${{ secrets.TOKEN }}

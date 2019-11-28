@@ -2,25 +2,22 @@ const axios = require('axios')
 console.log(process.argv)
 if (!process.argv[2]) return
 
-axios
-  .post(
-    'https://qyapi.weixin.qq.com/cgi-bin/webhook/send',
-    {
-      msgtype: 'text',
-      text: {
-        content: '测试2'
-      }
-    },
-    {
-      params: {
-        key: process.argv[2]
-      },
-      headers: { 'Content-Type': 'application/json' }
+const respoName = process.argv[2]
+const eventName = process.argv[3]
+const key = process.argv[4]
+
+axios.post(
+  'https://qyapi.weixin.qq.com/cgi-bin/webhook/send',
+  {
+    msgtype: 'text',
+    text: {
+      content: `仓库地址：${respoName}, 动作：${eventName}`
     }
-  )
-  .then(res => {
-    console.log(res)
-  })
-  .catch(err => {
-    console.log(err)
-  })
+  },
+  {
+    params: {
+      key
+    },
+    headers: { 'Content-Type': 'application/json' }
+  }
+)

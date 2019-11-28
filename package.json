@@ -6,9 +6,11 @@
   "author": "HcySunYang <HcySunYang@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "build": "node ./build.js"
+    "build": "node ./build.js",
+    "notify": "node ./notify.js"
   },
   "devDependencies": {
+    "axios": "^0.19.0",
     "html-minifier": "^4.0.0"
   }
 }

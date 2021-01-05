@@ -10,7 +10,7 @@
     "notify": "node ./notify.js"
   },
   "devDependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "html-minifier": "^4.0.0"
   }
 }
